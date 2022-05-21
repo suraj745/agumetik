@@ -1,0 +1,458 @@
+@import "./function.scss";
+
+.homepage {
+  // z-index: -1;
+  position: relative;
+  min-height: calc(100vh - 10rem);
+  margin-top: 10rem;
+  @include tablet {
+    margin-top: 10rem;
+  }
+  .companyName {
+    @include tablet {
+      font-size: 15px;
+    }
+    @include mobile {
+      font-size: 5rem;
+    }
+    font-size: 20rem;
+
+    position: absolute;
+    color: #f9f8fc;
+    // z-index: 100;
+    bottom: -3rem;
+  }
+
+  //
+  @include flex(center);
+  .content {
+    @include flex(space-between);
+
+    @include tablet {
+      html {
+        font-size: 4rem;
+      }
+      flex-direction: column;
+    }
+
+    width: 90%;
+    padding: 1rem;
+
+    // company name
+
+    .videoModal {
+      background-color: red;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    // left
+
+    .left {
+      & :nth-child(n) {
+        margin-top: 1.5rem;
+      }
+      h1 {
+        font-size: 6rem;
+
+        color: #202647;
+        @include tablet {
+          font-size: 5rem;
+          text-align: center;
+
+          @include desktop {
+            font-size: 4rem;
+            @include mobile {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 510;
+        word-wrap: break-word;
+        @include desktop {
+          font-size: 1.8rem;
+          @include tablet {
+            font-size: 1.6rem;
+            text-align: center;
+
+            @include mobile {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        color: #74767c;
+      }
+
+      .buttons {
+        width: 40rem;
+
+        @include flex(space-between);
+        @include tablet {
+          width: 100%;
+          @include flex(center);
+          @include mobile {
+            @include flex(center);
+          }
+        }
+
+        .moreButton {
+          padding: 1.3em 3em;
+          font-size: 1.5rem;
+
+          @include tablet {
+            font-size: 1.3rem;
+          }
+          font-weight: 550;
+
+          color: white;
+          background-color: #e3202d;
+          border: none;
+          border-radius: 45px;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease 0s;
+          cursor: pointer;
+          outline: none;
+
+          &:hover {
+            color: red;
+            outline: 1.2px solid red;
+            background: transparent;
+          }
+        }
+
+        .videoButton {
+          @include flex(space-between);
+          padding: 1.3em 3em;
+          font-size: 1.5rem;
+          font-weight: 500;
+          cursor: pointer;
+          background-color: white;
+          @include tablet {
+            font-size: 1.2rem;
+          }
+          color: #202647;
+          background: none;
+          border: none;
+          border-radius: 45px;
+          transition: all 0.3s ease 0s;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+    }
+
+    .right {
+      .bannerContainer {
+        .mobileImage {
+          display: none;
+
+          @include tablet {
+            display: block;
+          }
+        }
+        .banner {
+          @include tablet {
+            display: none;
+          }
+
+          position: relative;
+
+          // screen
+
+          & :nth-child(1) {
+            position: relative;
+            left: 6rem;
+            z-index: 100;
+            top: 10rem;
+          }
+
+          & :nth-last-child(3) {
+            position: absolute;
+            top: 3rem;
+            right: 14rem;
+          }
+
+          // boy1
+          & :nth-child(3) {
+            position: absolute;
+            top: 16rem;
+            z-index: 20;
+            right: 30rem;
+          }
+          // box
+
+          & :nth-child(2) {
+            right: 15rem;
+            bottom: 32rem;
+            position: absolute;
+          }
+
+          // arrow
+
+          // girl
+          & :nth-last-child(5) {
+            right: 27rem;
+            bottom: 42rem;
+            position: absolute;
+            z-index: 10;
+          }
+
+          & :nth-last-child(4) {
+            right: 33rem;
+            bottom: 32rem;
+            position: absolute;
+            z-index: 10;
+          }
+
+          // digital
+
+          & :nth-last-child(9) {
+            right: 40rem;
+            bottom: 42rem;
+            position: absolute;
+            z-index: 10;
+          }
+
+          // boy2
+
+          & :nth-child(4) {
+            top: 18rem;
+            right: 32rem;
+            position: relative;
+            z-index: 40;
+          }
+
+          & :nth-child(5) {
+            top: 15rem;
+            right: 43rem;
+            position: relative;
+            z-index: 40;
+          }
+          // filter
+          & :nth-last-child(7) {
+            right: 33rem;
+            bottom: 21rem;
+            position: absolute;
+            z-index: 30;
+          }
+
+          & :nth-last-child(8) {
+            top: -8rem;
+            z-index: 10;
+            left: 12rem;
+            position: relative;
+          }
+          // filter
+          & :nth-last-child(6) {
+            top: 0rem;
+            z-index: 105;
+            left: 21rem;
+            position: relative;
+          }
+
+          & :nth-last-child(1) {
+            top: -61rem;
+            z-index: 105;
+            left: 8rem;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  .shapeImages {
+    @include tablet {
+      display: none;
+    }
+    @keyframes rotateMe {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes animationFramesOne {
+      0% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+      20% {
+        transform: translate(73px, -1px) rotate(36deg);
+      }
+      40% {
+        transform: translate(141px, 72px) rotate(72deg);
+      }
+      60% {
+        transform: translate(83px, 122px) rotate(108deg);
+      }
+      80% {
+        transform: translate(-40px, 72px) rotate(144deg);
+      }
+      100% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+    }
+    @keyframes animationFramesTwo {
+      0% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+      20% {
+        transform: translate(-73px, 1px) rotate(-36deg);
+      }
+      40% {
+        transform: translate(-141px, -72px) rotate(-72deg);
+      }
+      60% {
+        transform: translate(-83px, -122px) rotate(-108deg);
+      }
+      80% {
+        transform: translate(40px, -72px) rotate(-144deg);
+      }
+      100% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+    }
+    @keyframes rotate3d {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+    @keyframes moveScale {
+      0% {
+        transform: scale(0.6);
+      }
+      50% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(0.6);
+      }
+    }
+    @keyframes moveLeftBounce {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes moveBounce {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+
+    .shape1 {
+      position: absolute;
+      top: -25rem;
+      left: 2rem;
+      animation-name: moveLeftBounce;
+      animation-iteration-count: infinite;
+
+      animation-duration: 3s;
+    }
+
+    .shape2 {
+      position: absolute;
+      left: 45%;
+      animation-name: animationFramesOne;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+    }
+
+    .shape3 {
+      position: absolute;
+      top: 45%;
+      left: 5rem;
+
+      animation-name: rotate3d;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+    }
+
+    .shape4 {
+      position: absolute;
+      top: 13rem;
+      left: 3rem;
+    }
+
+    .shape5 {
+      position: absolute;
+      top: -10rem;
+      left: 45%;
+      animation-name: moveScale;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .shape6 {
+      position: absolute;
+      bottom: -35rem;
+      left: 45%;
+      animation-name: moveScale;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .shape7 {
+      position: absolute;
+      top: -30rem;
+      right: 5rem;
+      animation-name: rotate3d;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+    }
+
+    .shape8 {
+      position: absolute;
+      bottom: -30rem;
+      right: 25%rem;
+      animation-name: rotate3d;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+    }
+
+    .shape10 {
+      position: absolute;
+      bottom: -30rem;
+      right: 25%rem;
+      animation-name: rotate3d;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+    }
+
+    .shape11 {
+      position: absolute;
+      right: 5rem;
+      bottom: -20rem;
+      animation-name: moveLeftBounce;
+      animation-iteration-count: infinite;
+      animation-duration: 4s;
+    }
+  }
+}
+
+//////////////////////////////////////////////////@at-root

@@ -1,0 +1,66 @@
+@import "../function.scss";
+.teamContainer {
+  ul {
+    list-style: none;
+    li {
+      margin-top: 2rem;
+    }
+  }
+  padding: 2rem;
+  background-color: #f5f5ff;
+  .teamContent {
+    text-align: center;
+    // title
+    .title {
+      h5 {
+        color: red;
+        font-size: 1.9rem;
+      }
+    }
+
+    // heading
+
+    .heading {
+      font-size: 3rem;
+      @include tablet {
+        font-size: 2.5rem;
+      }
+    }
+
+    //   paragraph
+    .paragraph {
+      p {
+        line-height: 2.5rem;
+        color: #83858a;
+      }
+    }
+
+    //   design
+
+    .design {
+      & :nth-child(1) {
+        background-color: #fab4a2;
+        height: 0.4rem;
+        width: 9rem;
+      }
+
+      & :nth-child(2) {
+        background-color: #ff724e;
+        height: 0.4rem;
+        width: 4rem;
+        margin-left: 2rem;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include tablet {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

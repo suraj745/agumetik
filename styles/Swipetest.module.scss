@@ -1,0 +1,14 @@
+@import "./function.scss";
+
+.container {
+  width: 80rem;
+
+  @include flex(center);
+  @include desktop {
+    width: 60rem;
+    @include tablet {
+      width: 100vw;
+      padding: 1rem;
+    }
+  }
+}

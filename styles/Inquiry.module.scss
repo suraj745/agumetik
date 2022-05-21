@@ -1,0 +1,70 @@
+@import "./function.scss";
+
+.inquiryPage {
+  min-height: 90vh;
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      margin-top: 2rem;
+    }
+
+    .cardGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4rem;
+
+      @include tablet {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  display: grid;
+  place-items: center;
+
+  // title
+  .title {
+    h5 {
+      color: red;
+      font-size: 1.4rem;
+    }
+  }
+
+  // heading
+
+  .heading {
+    font-size: 3rem;
+
+    @include tablet {
+      font-size: 2rem;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  //   paragraph
+
+  //   design
+
+  .design {
+    & :nth-child(1) {
+      background-color: #fab4a2;
+      height: 0.4rem;
+      width: 9rem;
+    }
+
+    & :nth-child(2) {
+      background-color: #ff724e;
+      height: 0.4rem;
+      width: 4rem;
+      margin-left: 2rem;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+}

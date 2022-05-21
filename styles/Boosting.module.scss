@@ -1,0 +1,228 @@
+@import "./function.scss";
+
+.BoostingPage {
+  ul {
+    list-style: none;
+  }
+
+  padding: 5rem;
+  @include tablet {
+    padding: 2rem;
+  }
+  .icon {
+    @include flex(center);
+    img {
+      width: 4rem;
+    }
+  }
+
+  .Box2 {
+    margin-top: 2rem;
+  }
+  .Box3 {
+    margin-top: 5rem;
+    padding: 3rem;
+    @include tablet {
+      padding: 0rem;
+    }
+    background-color: white;
+  }
+  // title
+  .title {
+    h5 {
+      color: red;
+      font-size: 1.9rem;
+    }
+  }
+
+  // heading
+
+  .heading {
+    font-size: 3rem;
+    @include tablet {
+      font-size: 1.8rem;
+    }
+  }
+
+  //   paragraph
+  .paragraph {
+    p {
+      line-height: 2.5rem;
+      color: #83858a;
+    }
+  }
+
+  //   design
+
+  .design {
+    & :nth-child(1) {
+      background-color: #fab4a2;
+      height: 0.4rem;
+      width: 9rem;
+    }
+
+    & :nth-child(2) {
+      background-color: #ff724e;
+      height: 0.4rem;
+      width: 4rem;
+      margin-left: 2rem;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+
+  //   ////
+
+  .top {
+    ul {
+      li {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .middle {
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        @include tablet {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+        }
+      }
+
+      place-items: center;
+      .tab {
+        padding: 2rem 6rem;
+
+        @include tablet {
+          padding: 1rem 3rem;
+
+          @include mobile {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        &:hover {
+          background-color: red;
+        }
+      }
+
+      & :nth-last-child(5) {
+        background-color: #dcffbd;
+        box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+      }
+
+      & :nth-last-child(4) {
+        background-color: #ffdfb9;
+        box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+      }
+      & :nth-last-child(3) {
+        background-color: #b3ffed;
+        box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+      }
+
+      & :nth-child(5) {
+        background: #d6cfff;
+        box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+      }
+
+      & :nth-child(6) {
+        background-color: #7acaf6;
+        box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+      }
+
+      & :nth-last-child(6) {
+        box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+      }
+    }
+  }
+
+  //   button
+  .button button {
+    background: none;
+    margin-top: 2rem;
+    outline: none;
+    padding: 1rem 3rem;
+    border-radius: 40px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 550;
+    transition: 0.5s;
+
+    &:hover {
+      background: none;
+      color: red;
+      outline: 1px solid red;
+    }
+  }
+
+  .content {
+    padding: 3rem;
+
+    @include tablet {
+      padding: 0rem;
+    }
+    .cardss {
+      display: flex;
+      @include tablet {
+        word-wrap: break-word;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0rem;
+      }
+
+      & :nth-child(2) {
+        margin-left: 2rem;
+
+        @include tablet {
+          margin-left: 0rem;
+        }
+      }
+
+      .card1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 2rem;
+
+        & :nth-child(2) {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  // bottom
+
+  .bottom {
+    box-shadow: -2px -1px 10px 10px rgba(189, 189, 189, 0.292);
+    @include tablet {
+      box-shadow: none;
+    }
+    .clickContent {
+      place-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      @include tablet {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0rem;
+      }
+
+      ul {
+        li {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+@import "./function.scss";
+.ServicePage {
+  ul {
+    list-style: none;
+  }
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5rem;
+  @include tablet {
+    padding: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include mobile {
+      padding: 0.2rem;
+    }
+  }
+
+  //   left
+  .QuickLeft {
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+
+    ul {
+      li {
+        margin-top: 2rem;
+      }
+
+      //   title
+
+      .title {
+        h5 {
+          color: red;
+          font-size: 1.2rem;
+        }
+      }
+
+      //   heading
+
+      .Heading {
+        font-size: 3rem;
+        @include tablet {
+          font-size: 1.8rem;
+        }
+      }
+
+      //   paragraph
+      .paragraph {
+        p {
+          line-height: 2.5rem;
+          color: #83858a;
+        }
+      }
+
+      //   design
+
+      .design {
+        & :nth-child(1) {
+          background-color: #f5ac6d;
+          height: 0.4rem;
+          width: 9rem;
+        }
+
+        & :nth-child(2) {
+          background-color: #ff724e;
+          height: 0.4rem;
+          width: 4rem;
+          margin-left: 2rem;
+        }
+        span {
+          display: inline-block;
+        }
+      }
+
+      //   button
+      .callButton button {
+        background: none;
+        outline: none;
+        padding: 1rem 3rem;
+        border-radius: 40px;
+        border: none;
+        background-color: red;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 550;
+        transition: 0.5s;
+
+        &:hover {
+          background: none;
+          color: red;
+          outline: 1px solid red;
+        }
+      }
+    }
+  }
+
+  //   right
+  .QuickRight {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 3rem;
+    grid-gap: 2rem;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row: 1rem;
+      grid-gap: 1rem;
+      padding: 0rem;
+      padding-top: 2rem;
+
+      @include mobile {
+        padding: 0.5rem;
+      }
+    }
+    section {
+      background-color: #f1eff8;
+    }
+
+    & :nth-child(2) {
+      margin-top: 2rem;
+
+      @include tablet {
+        margin: 0rem;
+        li {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    & :nth-child(1) {
+      margin-bottom: 2rem;
+
+      @include tablet {
+        margin: 0rem;
+        li {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    & :nth-child(3) {
+      margin-bottom: 2rem;
+
+      @include tablet {
+        margin: 0rem;
+      }
+      li {
+        margin-top: 1rem;
+      }
+    }
+
+    & :nth-child(4) {
+      margin-top: 2rem;
+
+      @include tablet {
+        margin: 0rem;
+
+        li {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "./function.scss";
+
+.sliderContainer {
+  @include flex(center);
+  position: relative;
+  overflow-x: scroll;
+  height: 15rem;
+
+  ul {
+    @include flex(center);
+    list-style: none;
+  }
+
+  .slider {
+    height: 20rem;
+    @include flex(center);
+  }
+  .mainSlider {
+    position: absolute;
+    @include flex(space-between);
+
+    & :nth-child(1) {
+      margin-left: 7rem;
+      @include tablet {
+        margin-left: 0rem;
+      }
+    }
+    img {
+      padding: 2rem 4rem;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

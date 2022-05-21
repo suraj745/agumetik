@@ -1,0 +1,94 @@
+@import "./function.scss";
+
+.section {
+  background-color: white;
+  transition: 0.6s;
+  border: 0.2px solid silver;
+  min-height: 45rem;
+  width: 40rem;
+  text-align: left;
+
+  @include desktop {
+    margin-top: 2rem;
+    @include tablet {
+      width: 35rem;
+      margin-top: 2rem;
+    }
+  }
+  &:hover {
+    box-shadow: 1px -1px 14px 7px rgba(128, 128, 128, 0.349);
+  }
+  .blogCard {
+    position: relative;
+
+    //   tag
+    list-style: none;
+    .tag {
+      @include flex(center);
+      flex-direction: column;
+      position: absolute;
+      background-color: red;
+      height: 6rem;
+      width: 6rem;
+      font-size: 1.2rem;
+      padding: 1rem;
+      color: white;
+      top: -7rem;
+      left: 33rem;
+      @include desktop {
+        @include tablet {
+          left: 27rem;
+          @include mobile {
+            left: 28rem;
+          }
+        }
+      }
+    }
+    .section2 {
+      padding: 2rem;
+      list-style: none;
+    }
+
+    // info
+
+    .info {
+      @include flex(flex-start);
+      color: #93908f;
+      & :nth-child(2) {
+        margin-left: 1rem;
+      }
+      .admin {
+        @include flex(flex-start);
+      }
+    }
+
+    // heading
+
+    .heading {
+      color: #202535;
+    }
+
+    .paragraph {
+      color: #93908f;
+    }
+    .button button {
+      background: none;
+      margin-top: 2rem;
+      outline: none;
+      padding: 1rem 3rem;
+      border-radius: 10px;
+      border: none;
+      background-color: red;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 550;
+      transition: 0.5s;
+
+      &:hover {
+        background: none;
+        color: red;
+        outline: 1px solid red;
+      }
+    }
+  }
+}

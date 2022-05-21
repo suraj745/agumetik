@@ -1,0 +1,141 @@
+@import "./function.scss";
+
+.services {
+  min-height: 90vh;
+  padding: 5rem;
+
+  @include tablet {
+    padding: 2rem;
+
+    @include mobile {
+      padding: 0rem;
+    }
+  }
+  background-color: #83858a17;
+  text-align: center;
+  display: grid;
+  place-items: center;
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      margin-top: 2rem;
+    }
+  }
+
+  // title
+  .title {
+    h5 {
+      color: red;
+      font-size: 1.9rem;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // heading
+
+  .heading {
+    font-size: 3rem;
+    @include tablet {
+      font-size: 2.5rem;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  //   paragraph
+  .paragraph {
+    p {
+      line-height: 2.5rem;
+      color: #83858a;
+    }
+  }
+
+  //   design
+
+  .design {
+    & :nth-child(1) {
+      background-color: #fab4a2;
+      height: 0.4rem;
+      width: 9rem;
+    }
+
+    & :nth-child(2) {
+      background-color: #ff724e;
+      height: 0.4rem;
+      width: 4rem;
+      margin-left: 2rem;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+
+  //   button
+  .serviceButton button {
+    background: none;
+    outline: none;
+    padding: 1rem 3rem;
+    border-radius: 40px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 550;
+    transition: 0.5s;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background: none;
+      color: red;
+      outline: 1px solid red;
+    }
+  }
+
+  .cards {
+    display: grid;
+    padding: 3rem;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 2rem;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 1rem;
+    }
+    .mainService {
+      background-color: white;
+    }
+
+    .hover {
+      transition-duration: 0.6s;
+      background-color: white;
+      &:hover {
+        background-color: red;
+        transform: translateY(-2rem);
+        p,
+        h1 {
+          color: white;
+        }
+      }
+    }
+
+    .Heading {
+      font-size: 3rem;
+      @include tablet {
+        font-size: 2.5rem;
+        @include mobile {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "./function.scss";
+
+.outerLayer {
+  @include flex(center);
+  position: relative;
+
+  padding: 3rem;
+  @include tablet {
+    padding: 2rem;
+
+    @include mobile {
+      padding: 0.5rem;
+    }
+  }
+  background-color: #f6f5fb;
+  .cardContainer {
+    border: 1px solid rgba(192, 192, 192, 0.388);
+    border-radius: 0.5rem;
+
+    //  content1
+    width: 50rem;
+    height: 30rem;
+
+    @include desktop {
+      width: 35rem;
+      @include tablet {
+        width: 40rem;
+      }
+    }
+
+    position: relative;
+    overflow: hidden;
+    ul {
+      list-style: none;
+    }
+
+    .cardContent1 {
+      background-color: #f6f5fb;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 8;
+      padding: 2rem;
+
+      text-align: left;
+      .icon {
+        display: inline-block;
+        padding: 1rem;
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid black;
+        line-height: 8rem;
+        border-style: dashed;
+        border-radius: 100%;
+
+        img {
+          width: 4rem;
+        }
+      }
+
+      .para p {
+        color: #8e9096;
+      }
+    }
+
+    // content2
+    .cardContent2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 1;
+      top: 0;
+
+      background-color: #f6f5fb;
+      padding: 1rem;
+
+      .heading1 {
+        color: #76787e;
+      }
+      .input {
+        padding: 0rem 2rem;
+        input {
+          padding: 1rem;
+          border: none;
+          outline: none;
+
+          width: 100%;
+        }
+      }
+
+      .button button {
+        background: none;
+        outline: none;
+        padding: 1rem 3rem;
+        border-radius: 40px;
+        border: none;
+        background-color: red;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 550;
+        transition: 0.5s;
+
+        &:hover {
+          background: none;
+          color: red;
+          outline: 1px solid red;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../function.scss";
+
+.singleServiceContainer {
+  padding: 5rem;
+  @include tablet {
+    padding: 2rem;
+    margin-top: 10rem;
+  }
+  .singleSeviceContent {
+    ul {
+      list-style: none;
+    }
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet {
+      padding: 1rem;
+      grid-template-columns: repeat(1, 1fr);
+
+      .rightContent {
+        margin-top: 3rem;
+      }
+    }
+  }
+  // leftContent
+  .leftContent {
+    p {
+      color: #6c6e74;
+    }
+    & :nth-last-child(3) {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    ul {
+      li {
+        margin-top: 2.5rem;
+
+        p {
+          margin-top: 2rem;
+        }
+
+        span {
+          margin-right: 1rem;
+          font-size: 3rem;
+          color: #e32431;
+        }
+      }
+    }
+  }
+}

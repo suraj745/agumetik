@@ -1,0 +1,38 @@
+@import "./team.module.scss";
+.teamCardContainer {
+  padding: 5rem;
+
+  .teamContent {
+    padding: 2rem;
+    background-color: white;
+
+    .position {
+      color: #a1a3a6;
+    }
+
+    ul {
+      li {
+        margin-top: 2rem;
+      }
+    }
+    //  icons
+    .social span {
+      width: 3rem;
+      height: 3rem;
+      display: inline-flex;
+      border-radius: 100%;
+      margin-left: 1rem;
+      color: palevioletred;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      transition: 0.5s;
+      border: 0.1rem solid palevioletred;
+
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}

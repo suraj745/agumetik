@@ -1,0 +1,55 @@
+@import "../function.scss";
+
+.techStackContainer {
+  padding: 5rem;
+  margin-top: 4rem;
+  .techStackContent {
+    // heading
+
+    ul {
+      text-align: center;
+      list-style: none;
+    }
+
+    .heading {
+      font-size: 4.5rem;
+
+      @include tablet {
+        font-size: 2.5rem;
+      }
+    }
+
+    .slider {
+      @include flex(center);
+      height: 30rem;
+    }
+
+    //   paragraph
+    .paragraph {
+      p {
+        line-height: 2.5rem;
+        color: #83858a;
+      }
+    }
+
+    //   design
+
+    .design {
+      & :nth-child(1) {
+        background-color: #fab4a2;
+        height: 0.4rem;
+        width: 9rem;
+      }
+
+      & :nth-child(2) {
+        background-color: #ff724e;
+        height: 0.4rem;
+        width: 4rem;
+        margin-left: 2rem;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}

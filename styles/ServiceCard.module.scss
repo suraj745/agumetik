@@ -1,0 +1,48 @@
+@import "./function.scss";
+
+.Card1 {
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+
+  ul {
+    padding: 2.5rem;
+
+    text-align: left;
+    li {
+      margin-top: 2rem;
+    }
+
+    .Heading {
+      font-size: 3rem;
+      text-align: left;
+      @include tablet {
+        font-size: 1.8rem;
+      }
+    }
+
+    //   paragraph
+    .paragraph {
+      p {
+        line-height: 2.5rem;
+        color: #83858a;
+        text-align: left;
+      }
+    }
+
+    // icons
+
+    .icon {
+      display: flex;
+      justify-content: flex-start;
+      padding: 1rem;
+      width: 8rem;
+      height: 8rem;
+      border: 1px solid black;
+      border-radius: 100%;
+
+      line-height: 8rem;
+      border-style: dashed;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin flex($horizontal) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: center;
+}
+
+@mixin mobile {
+  @media screen and (max-width: "480px") {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: "860px") {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: "1366px") {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: "1920px") {
+    @content;
+  }
+}

@@ -1,0 +1,93 @@
+@import "./function.scss";
+.footer {
+  // important
+  padding: 5rem;
+  background-image: url("../public//images//footer-bg.jpg");
+  display: grid;
+  place-items: top;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 40rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  ul {
+    list-style: none;
+
+    li {
+      color: silver;
+      margin-top: 1rem;
+
+      h1 {
+        color: white;
+
+        padding: 1rem;
+        margin-right: 2rem;
+        border-bottom: 0.2px solid silver;
+
+        @include mobile {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .about {
+    .aboutIcons span {
+      width: 3rem;
+      height: 3rem;
+      display: inline-flex;
+      border-radius: 100%;
+      margin-left: 1rem;
+      color: palevioletred;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+  .important {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  //  Rights
+}
+
+.rights {
+  background-color: #01082d;
+  color: white;
+  padding: 3rem 4rem;
+  @include flex(center);
+  height: 10rem;
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      font-size: 1.4rem;
+    }
+  }
+
+  & :nth-child(2) {
+    span {
+      padding: 0.5rem;
+    }
+  }
+}

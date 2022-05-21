@@ -1,0 +1,100 @@
+@import "../function.scss";
+.visionContainer {
+  padding: 5rem;
+  ul {
+    list-style: none;
+    li {
+      margin-top: 2rem;
+    }
+  }
+
+  @include tablet {
+    padding: 0rem;
+  }
+  .visionContent {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .visionRight {
+      //   title
+      .title {
+        h5 {
+          color: red;
+          font-size: 1.9rem;
+        }
+      }
+
+      // heading
+
+      .heading {
+        font-size: 3rem;
+        @include tablet {
+          font-size: 2.5rem;
+        }
+      }
+
+      //   paragraph
+      .paragraph {
+        p {
+          line-height: 2.5rem;
+          color: #83858a;
+        }
+      }
+
+      //   design
+
+      .design {
+        & :nth-child(1) {
+          background-color: #fab4a2;
+          height: 0.4rem;
+          width: 9rem;
+        }
+
+        & :nth-child(2) {
+          background-color: #ff724e;
+          height: 0.4rem;
+          width: 4rem;
+          margin-left: 2rem;
+        }
+        span {
+          display: inline-block;
+        }
+      }
+
+      // number
+
+      .number {
+        display: flex;
+        justify-content: space-between;
+        width: 35rem;
+        color: black;
+        span {
+          & :nth-child(1) {
+            font-size: 3rem;
+            font-weight: bold;
+          }
+
+          .number1,
+          .number2 {
+            display: flex;
+          }
+          a {
+            span {
+              & :nth-child(2) {
+                margin-top: 0.8rem;
+                color: silver;
+              }
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../function.scss";
+
+.formContainer {
+  @include flex(center);
+
+  .container1 {
+    @include flex(center);
+
+    & :nth-child(2) {
+      margin-left: 2rem;
+      @include tablet {
+        margin-left: 0rem;
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  .message {
+    height: 15rem;
+  }
+
+  input {
+    background: none;
+    width: 80rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f3f5fe;
+    width: 100%;
+    font-size: 1.5rem;
+
+    &:focus {
+      outline: 0.2px solid red;
+    }
+  }
+
+  .button button {
+    margin-top: 2rem;
+    width: 15rem;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: red;
+    padding: 1rem;
+    color: white;
+    font-weight: 550;
+    border-radius: 40px;
+    font-size: 1.4rem;
+
+    &:hover {
+      background-color: transparent;
+      outline: 0.2px solid red;
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "./function.scss";
+.notContainer {
+  padding: 5rem;
+  margin-top: 10rem;
+  @include tablet {
+    padding: 2rem;
+  }
+  .notContent {
+    ul {
+      text-align: center;
+      list-style: none;
+
+      li {
+        margin-top: 2rem;
+      }
+    }
+
+    .heading {
+      font-size: 3rem;
+      color: #202647;
+    }
+
+    .paragraph {
+      p {
+        color: #8a8c91;
+      }
+    }
+
+    .button button {
+      background: none;
+      margin-top: 2rem;
+      outline: none;
+      padding: 1rem 3rem;
+      border-radius: 40px;
+      border: none;
+      background-color: #e60459;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 550;
+      transition: 0.5s;
+
+      &:hover {
+        background: none;
+        color: red;
+        outline: 1px solid red;
+      }
+    }
+  }
+}

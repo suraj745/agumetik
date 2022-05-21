@@ -1,0 +1,132 @@
+@import "./function.scss";
+.About {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5rem;
+
+  @include tablet {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    padding: 2rem;
+
+    @include mobile {
+      padding: 0rem;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  .left {
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+  }
+
+  .right {
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+    ul {
+      li {
+        margin-top: 2rem;
+      }
+    }
+    // title
+    .title {
+      h5 {
+        color: red;
+        font-size: 1.4rem;
+      }
+    }
+
+    // heading
+
+    .heading {
+      font-size: 3rem;
+      @include tablet {
+        font-size: 2.5rem;
+
+        @include mobile {
+          font-size: 1.9rem;
+        }
+      }
+    }
+
+    //   paragraph
+    .paragraph {
+      p {
+        line-height: 2.5rem;
+        color: #83858a;
+      }
+    }
+
+    //   design
+
+    .design {
+      & :nth-child(1) {
+        background-color: #fab4a2;
+        height: 0.4rem;
+        width: 9rem;
+      }
+
+      & :nth-child(2) {
+        background-color: #ff724e;
+        height: 0.4rem;
+        width: 4rem;
+        margin-left: 2rem;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+
+    //   button
+    .downloadButton button {
+      background: none;
+      outline: none;
+      padding: 1rem 3rem;
+      border-radius: 40px;
+      border: none;
+      background-color: red;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 550;
+      transition: 0.5s;
+
+      &:hover {
+        background: none;
+        color: red;
+        outline: 1px solid red;
+      }
+    }
+
+    // number
+
+    .number {
+      display: flex;
+      justify-content: space-between;
+      width: 35rem;
+      color: black;
+      span {
+        & :nth-child(1) {
+          font-size: 3rem;
+          font-weight: bold;
+        }
+
+        .number1,
+        .number2 {
+          display: flex;
+        }
+        a {
+          span {
+            & :nth-child(2) {
+              margin-top: 0.8rem;
+            }
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

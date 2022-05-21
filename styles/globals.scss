@@ -1,0 +1,41 @@
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+@import "./function.scss";
+$main-font-family: "Roboto", sans-serif;
+$main-color: #f20791;
+$optional-color: #fbe6d4;
+$white-color: #ffffff;
+$black-color: #202647;
+$paragraph-color: #6a6c72;
+$font-size: 15px;
+$transition: 0.5s;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  body {
+    font-family: $main-font-family;
+    font-size: $font-size;
+    color: $paragraph-color;
+    overflow-x: hidden;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5 {
+      color: $black-color;
+    }
+
+    .popUp {
+      top: 3rem;
+      opacity: 1;
+      background-color: white;
+    }
+  }
+}

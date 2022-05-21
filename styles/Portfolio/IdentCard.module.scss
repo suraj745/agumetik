@@ -1,0 +1,42 @@
+@import "../function.scss";
+
+.identCardContainer {
+  @include desktop {
+    margin-top: 2rem;
+  }
+  display: flex;
+  justify-content: flex-start;
+  width: 35rem;
+  padding: 2rem;
+  height: 15rem;
+  align-items: flex-start;
+
+  box-shadow: 2px 3px 28px 0px rgba(0, 0, 0, 0.224);
+
+  &:hover .logo {
+    background-color: #e3202d;
+    color: white;
+    border: none;
+  }
+
+  .logo {
+    font-size: 3rem;
+    width: 6rem;
+    height: 6rem;
+    border: 1px dashed black;
+    border-radius: 100%;
+    color: #28406d;
+    @include flex(center);
+  }
+
+  .right {
+    padding: 1rem;
+    h1 {
+      font-size: 2rem;
+      color: #28406d;
+    }
+  }
+  p {
+    color: #72747a;
+  }
+}

@@ -1,0 +1,78 @@
+@import "../function.scss";
+
+.AboutAdsContainer {
+  padding: 3rem;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(#3138b9e3, #3138b9e3),
+    url("/images/page-banner-bg.jpg");
+  height: 40rem;
+
+  ul {
+    list-style: none;
+    color: white;
+    text-align: center;
+
+    li {
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 4rem;
+      color: white;
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+
+    span {
+      background-color: white;
+      padding: 0.5rem;
+      border-radius: 40px;
+      justify-content: space-between;
+      display: flex;
+      input {
+        background: none;
+        border: none;
+        background-color: white;
+        padding: 1.8rem;
+        width: 60rem;
+        font-size: 1.6rem;
+
+        outline: none;
+        border-radius: 40px;
+
+        @include desktop {
+          width: 40rem;
+          @include tablet {
+            width: 30rem;
+            @include mobile {
+              width: 20rem;
+            }
+          }
+        }
+      }
+
+      .button {
+        background: none;
+        outline: none;
+        padding: 1.5rem 4rem;
+        border-radius: 40px;
+        border: none;
+        background-color: #e60459;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 550;
+
+        transition: 0.5s;
+
+        &:hover {
+          background: #13186be3;
+        }
+      }
+    }
+  }
+}

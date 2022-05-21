@@ -1,0 +1,125 @@
+@import "./function.scss";
+
+.ModalDark {
+  z-index: 10000000000;
+  ul {
+    list-style: none;
+  }
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.685);
+
+  // AbutContainer
+  .AboutContainer {
+    padding: 4rem;
+
+    @include flex(space-between);
+    flex-direction: column;
+    right: 0;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+
+    @include tablet {
+      width: 100vw;
+    }
+
+    // crossButton
+
+    .crossButton {
+      display: block;
+      width: 100%;
+      z-index: 1000;
+      text-align: end;
+
+      li {
+        & :nth-child(1):hover {
+          color: silver;
+        }
+      }
+    }
+    .About {
+      position: absolute;
+      li {
+        margin-top: 1.5rem;
+      }
+
+      p {
+        color: #83848a;
+        line-height: 2.5rem;
+      }
+    }
+
+    // instagram
+    .Instagram {
+      @include tablet {
+        margin-top: 10rem;
+      }
+      ul {
+        li {
+          margin-top: 2rem;
+        }
+        & :nth-child(1) h1 {
+          font-size: 2rem;
+        }
+
+        // instaImagesGrid
+        .instaImages {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 1rem;
+
+          img {
+            @include mobile {
+              width: 85px;
+            }
+          }
+        }
+      }
+    }
+
+    // Contact
+
+    .contact {
+      text-align: center;
+
+      li {
+        margin-top: 1.5rem;
+      }
+
+      & :nth-child(1) {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      & :nth-child(2) {
+        color: #76777d;
+      }
+
+      & :nth-child(3) {
+        font-size: 1.8rem;
+        color: #2d3356;
+        font-weight: bold;
+      }
+      .socialMedia {
+        display: flex;
+        justify-content: space-between;
+        span {
+          display: inline-block;
+
+          width: 3rem;
+          height: 3rem;
+          border-radius: 100%;
+          border: 1px solid silver;
+
+          a {
+            text-align: center;
+            line-height: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+}

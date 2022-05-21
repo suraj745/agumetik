@@ -1,0 +1,69 @@
+@import "./function.scss";
+
+.upper {
+  @include flex(center);
+  padding: 4rem;
+  margin-left: 2rem;
+  @include tablet {
+    margin-left: 0rem;
+    @include mobile {
+      margin-left: 2rem;
+    }
+  }
+
+  width: 35rem;
+
+  @include tablet {
+    padding: 3rem;
+  }
+  .swiperCard {
+    top: 0;
+
+    ul {
+      list-style: none;
+      text-align: center;
+      width: 35rem;
+      @include tablet {
+        width: 30rem;
+
+        @include mobile {
+          width: 35rem;
+        }
+      }
+      padding: 1rem;
+
+      & :nth-child(4) {
+        font-size: 5rem;
+      }
+
+      & :nth-child(5) {
+        padding-bottom: 0rem 2rem 2rem 2rem;
+      }
+    }
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #f6f5fb;
+
+    .profile {
+      bottom: 2.3rem;
+      transform: translateY(-3rem);
+      span {
+        overflow: hidden;
+        background-color: red;
+        position: relative;
+        border-radius: 100%;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        border-radius: 100%;
+        width: 100px;
+        position: relative;
+
+        height: 100px;
+      }
+    }
+  }
+}
